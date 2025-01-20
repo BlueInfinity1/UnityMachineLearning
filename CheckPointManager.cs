@@ -18,17 +18,17 @@ public class CheckPointManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    // Iterate through each CheckPoint (children of this manager object) and assign the correct indices to them
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
             var child = transform.GetChild(i);
             var checkPoint = child.GetComponent<CheckPoint>();
-            if (checkPoint != null)
-            {
-                checkPoint.checkPointIndex = i;
-            }
+            
+            if (checkPoint != null)            
+                checkPoint.checkPointIndex = i;            
         }
 
         totalCheckPoints = transform.childCount;
