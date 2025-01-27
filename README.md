@@ -10,7 +10,7 @@ This repository implements a **Driver Agent** using Unity's **ML-Agents** framew
 
 The **Driver Agent** is a Unity ML-Agents-based AI agent that learns to drive on a race track by maximizing rewards and minimizing penalties through reinforcement learning.
 
-### Key Features
+### Key Features in Training
 
 - **Checkpoint System**: The agent learns to pass through indexed checkpoints on the race track in the correct order.
 - **Speed Optimization**: Faster checkpoint completion results in higher rewards, incentivizing the agent to drive efficiently.
@@ -19,17 +19,7 @@ The **Driver Agent** is a Unity ML-Agents-based AI agent that learns to drive on
 
 ---
 
-## Training Behavior
-
-The training process focuses on optimizing the following behaviors:
-1. **Checkpoint Navigation**: Passing through the next checkpoint in sequence gives positive rewards.
-2. **Speed Encouragement**: Rewards are scaled based on how quickly the agent reaches the next checkpoint.
-3. **Inside Track Bonus**: Rewards for staying close to "Inside Track Guide" objects.
-4. **Collision Penalty**: Penalties for hitting or staying in contact with track walls.
-
----
-
-## Input System
+### Input System
 
 - **Discrete Actions**: The agent uses discrete inputs to control acceleration (`0 or 1`) and turning (`-1, 0, or 1` for left, none, and right).
 - **Heuristic Mode**: Manual controls for testing allow human players to drive using the keyboard (`Space` for acceleration, `A/D` for turning).
